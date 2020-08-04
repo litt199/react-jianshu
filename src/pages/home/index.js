@@ -1,9 +1,10 @@
-import React,{Component} from 'react'
+import React,{PureComponent} from 'react'
 import {connect} from 'react-redux'
 import Topic from './components/Topic'
 import List from './components/List'
 import Recommend from './components/Recommend'
 import {actionCreators} from './store'
+import {BackTop} from './style'
 
 import {
     HomeWrapper,
@@ -12,7 +13,10 @@ import {
 
 } from './style'
 
-class Home extends Component{
+class Home extends PureComponent{
+    handleScrollTop(){
+        window.scrollTo(0,0);
+    }
     render(){
         return(
             <HomeWrapper>
@@ -24,6 +28,7 @@ class Home extends Component{
                 <HomeRight>
                     <Recommend/>
                 </HomeRight>
+                <BackTop onClick={this.handleScrollTop}>顶部</BackTop>
             </HomeWrapper>
         )
     }
