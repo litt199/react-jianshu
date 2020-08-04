@@ -1,5 +1,5 @@
 import React ,{Component} from 'react'
-import {ListItem,ListInfo} from '../style'
+import {ListItem,ListInfo,ListMore} from '../style'
 import {connect} from 'react-redux'
 
 class List extends Component{
@@ -17,9 +17,11 @@ class List extends Component{
                                     <p className='desc'>{item.get('desc')}</p>
                                 </ListInfo>
                             </ListItem>
+                            
                         )
                     })
                 }
+                <ListMore>加载更多</ListMore>
 
             </div>
 

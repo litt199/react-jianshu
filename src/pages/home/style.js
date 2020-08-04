@@ -93,3 +93,7 @@ export const RecommendItem = styled.div`
     background:url(${(props)=>props.imgUrl});
     background-size:contain;
 `
+
+export const ListMore = styled.div`
+    
+`
